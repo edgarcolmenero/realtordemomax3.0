@@ -14,7 +14,9 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <a href="index.html"><img src="new logo.png" alt="Edgar Colmenero Logo" /></a>
+      <a href="index.html" class="nav-logo">
+        <img src="new logo.png" alt="Edgar Colmenero Logo" />
+      </a>
     </div>
     <nav class="nav-links">
       <ul>
@@ -41,8 +43,45 @@
         </li>
         <li><a href="contact.html">Let’s Connect</a></li>
       </ul>
-    </nav>
+    </nav>  
+  
+    <!-- Hamburger -->
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>  
   </header>
+
+  <!-- Mobile Overlay Nav -->
+<div class="mobile-nav-overlay" id="mobileNav">
+  <button class="close-nav" id="closeNav">✕</button>
+  <ul class="mobile-nav-list">
+    <li class="mobile-nav-link" data-section="about">
+      About
+      <ul class="sub-menu" id="aboutSub">
+        <li><a href="about.html">Meet Edgar</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav-link" data-section="services">
+      Services
+      <ul class="sub-menu" id="servicesSub">
+        <li><a href="why-edgar.html">Why Edgar</a></li>
+        <li><a href="featured-communities.html">Featured Communities</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav-link" data-section="guides">
+      Guides
+      <ul class="sub-menu" id="guidesSub">
+        <li><a href="buyerguide.html">Buyer Guide</a></li>
+        <li><a href="seller-guide.html">Seller Guide</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Let’s Connect</a></li>
+  </ul>
+</div>
+
 
   <!-- Contact Hero -->
   <section class="contact-hero">
