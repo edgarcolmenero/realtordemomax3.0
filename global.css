@@ -451,3 +451,13 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: none !important;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex !important;
+  }
+}
