@@ -1,0 +1,615 @@
+/* style.css - Index-Only Styling for Realtor Homepage */
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: var(--section-padding) 3rem;
+  background: linear-gradient(to bottom right, #f7f7f7, #ffffff);
+  min-height: 100vh;
+}
+
+.hero-image {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  max-width: 800px;
+  align-self: center;
+
+
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  display: inline-block;
+  width: fit-content;
+  align-self: center;
+
+}
+.btn-primary:hover {
+  background-color: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+
+
+/* About Section */
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo {
+  flex: 1 1 300px;
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+blockquote {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #777;
+  border-left: 4px solid var(--gold);
+  padding-left: 1rem;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background-color: #fcfcfc;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.timeline-step {
+  flex: 1 1 220px;
+  text-align: center;
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 1.5rem;
+  background: var(--accent);
+  color: white;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+/* Counters */
+.counters {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.counter-box span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+}
+
+/* Listings */
+.listing-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.listing-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform var(--transition);
+}
+
+.listing-card:hover {
+  transform: scale(1.02);
+}
+
+.listing-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.testimonial-bubble {
+  min-width: 300px;
+  scroll-snap-align: center;
+  padding: 2rem;
+  border-left: 5px solid var(--accent);
+  background-color: #f0f8ff;
+  border-radius: var(--radius);
+  font-style: italic;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.testimonial-bubble::before {
+  content: "★★★★★";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: gold;
+  font-size: 1.1rem;
+}
+
+.testimonial-bubble strong {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Contact */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--gold);
+}
+
+#confirmation-message {
+  color: green;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+
+/* Fullscreen Banner Section */
+.fullscreen-banner {
+  position: relative;
+  height: 100vh;
+  background-image: url('premium_photo-1661915661139-5b6a4e4a6fcc.jpeg'); /* Replace with your actual image filename */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark visor overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text {
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.banner-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.banner-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.banner-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Fullscreen Mission Section */
+.fullscreen-mission {
+  position: relative;
+  height: 100vh;
+  background-image: url('unsplash.jpeg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Visor effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-text {
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.mission-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mission-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Fullscreen Testimonials */
+.fullscreen-testimonials {
+  position: relative;
+  height: 100vh;
+  background-image: url('lycs-architecture-kUdbEEMcRwE-unsplash.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-overlay {
+  background: rgba(255, 255, 255, 0.85); /* Subtle white veil */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.testimonial-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: #f5b921;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-carousel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.testimonial-carousel p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #000;
+}
+
+#testimonial-name {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.testimonial-btn {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+
+.testimonial-btn.left {
+  left: -60px;
+}
+
+.testimonial-btn.right {
+  right: -60px;
+}
+
+.testimonial-message {
+  flex: 1;
+  color: white;
+  text-align: center;
+}
+
+.hero-banner {
+  position: relative;
+  background-image: url("lycs-architecture-kUdbEEMcRwE-unsplash.jpg"); /* Your image */
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  height: 100vh; 
+  color: white;
+  text-align: left;
+}
+
+
+.hero-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Full overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+
+.hero-banner h1 {
+  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  color: #fff;
+}
+
+.trusted-brands {
+  background-color: #fffffff9;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.brands-scroll {
+  display: flex;
+  animation: scroll-logos 40s linear infinite;
+  width: max-content;
+}
+
+.brands-scroll img {
+  height: 175px; /* Adjust as needed */
+  width: auto;
+  object-fit: contain;
+  margin-right: 4rem;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Scroll animation */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.step-number {
+  display: inline-block;
+  font-size: 1.5rem;
+  background: #000;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step-number:hover {
+  background-color: var(--gold);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.listing-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.listing-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-card:hover {
+  transform: translateY(-6px);
+}
+
+.listing-img-wrapper {
+  height: 220px;
+  overflow: hidden;
+}
+
+.listing-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listing-info {
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.listing-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.listing-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.listing-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-top: auto;
+}

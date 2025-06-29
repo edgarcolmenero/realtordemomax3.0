@@ -1,0 +1,221 @@
+/* featuredcommunities.css */
+
+:root {
+    --bg: #ffffff;
+    --text: #111;
+    --accent: #c9a96e;
+    --overlay-dark: rgba(0, 0, 0, 0.6);
+    --radius: 12px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --transition: 0.3s ease;
+    --max-width: 1200px;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* HERO */
+  .hero-communities {
+    height: 100vh;
+    background: url('luxury4.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-communities .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--overlay-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  /* COMMUNITIES GRID */
+  .communities-showcase {
+    position: relative;
+    padding: 6rem 2rem;
+    color: #111;
+    text-align: center;
+    background: url('Cities.avif') center/cover no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  
+  .communities-showcase::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.85); /* white tint */
+    z-index: 1;
+  }
+  
+  .communities-showcase h2 {
+    position: relative;
+    z-index: 2;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .grid-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  .community-card {
+    height: 200px;
+    background: url('cities.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-radius: var(--radius);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  .community-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  .community-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    filter: brightness(1.05);
+  }
+  
+  .community-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .community-card span,
+  .community-card {
+    z-index: 2;
+  }
+  
+  /* CTA FOOTER */
+  .cta-footer {
+    background: url('luxury5.jpg') center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cta-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--overlay-dark);
+    z-index: 1;
+  }
+  
+  .cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    padding: 2rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-content p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .cta-btn:hover {
+    background: var(--accent);
+    color: white;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-text h1,
+    .cta-content h2 {
+      font-size: 2rem;
+    }
+  
+    .communities-showcase h2 {
+      font-size: 2rem;
+    }
+  
+    .community-card {
+      height: 180px;
+    }
+  }
+  

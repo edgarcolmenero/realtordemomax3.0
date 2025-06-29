@@ -1,0 +1,301 @@
+/* whyedgar.css */
+
+:root {
+    --bg: #ffffff;
+    --text: #111;
+    --accent: #c9a96e;
+    --overlay-dark: rgba(0, 0, 0, 0.65);
+    --radius: 12px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --transition: 0.3s ease;
+    --max-width: 1200px;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  section {
+    padding: 5rem 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .value-card {
+    background: #fefefe;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  }
+  
+  .value-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    color: var(--accent);
+  }
+  
+  .value-card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .statement {
+    text-align: center;
+    margin: 4rem auto;
+    max-width: 900px;
+  }
+  
+  .statement h2 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  .statement p {
+    font-size: 1.15rem;
+    color: #444;
+  }
+  
+  .split-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background: linear-gradient(to right, #ffffff, #f9f9f9);
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  section.split-section {
+    max-width: unset;
+    padding: 0;
+  }
+  
+  .split-section > .split-text,
+  .split-section > .split-visual {
+    flex: 1 1 500px;
+    max-width: 600px;
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .split-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  .split-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  
+  .split-visual {
+    text-align: center;
+    animation: fadeUp 1s ease 0.3s forwards;
+    opacity: 0;
+  }
+  
+  .split-visual img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+  }
+  
+  .split-visual img:hover {
+    transform: scale(1.03);
+  }
+  
+  .cta-block {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('luxury3.jpg') center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  section.cta-block {
+    max-width: unset;
+    padding: 0;
+  }
+  
+  
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--overlay-dark);
+    z-index: 1;
+  }
+  
+  .cta-box {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    max-width: 700px;
+    padding: 2rem;
+  }
+  
+  .cta-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .cta-box p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .cta-btn:hover {
+    background: var(--accent);
+    color: white;
+  }
+  
+  .upgraded-statement {
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #fffdf9, #ffffff);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .accent-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .upgraded-statement h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: fadeUp 0.7s ease-out forwards;
+  }
+  
+  .highlight-underline {
+    position: relative;
+  }
+  
+  .highlight-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: -5px;
+    left: 0;
+    background: var(--accent);
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  .upgraded-statement p {
+    font-size: 1.25rem;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.75;
+    animation: fadeUp 1s ease 0.3s forwards;
+  }
+  
+  .highlight-word {
+    font-weight: 600;
+    color: #111;
+    background: linear-gradient(to right, var(--accent), #d8b88b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    section {
+      padding: 3rem 1.5rem;
+    }
+  
+    .statement h2,
+    .cta-box h2 {
+      font-size: 2rem;
+    }
+  
+    .split-section {
+      flex-direction: column;
+    }
+  }
+  

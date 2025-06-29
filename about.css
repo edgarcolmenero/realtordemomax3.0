@@ -1,0 +1,423 @@
+/* about.css - Styles specific to the About page */
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('about-hero.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .about-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4rem 2rem;
+    color: white;
+    max-width: 800px;
+    border-radius: var(--radius);
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  /* Bio Section */
+  .about-bio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .about-bio-photo {
+    flex: 1 1 300px;
+  }
+  
+  .about-bio-photo img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .about-bio-text {
+    flex: 1 1 500px;
+  }
+  
+  .about-bio-text h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .about-bio-text p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Core Values Grid */
+  .about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+  }
+  
+  .value-card:hover {
+    background-color: var(--accent-light);
+  }
+  
+  .value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  
+  .value-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Stats Section (inherits counter-box styles) */
+  .about-stats {
+    padding-top: 2rem;
+  }
+  
+  /* Bottom Banner CTA */
+  .about-cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .about-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-cta .btn-primary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+  
+  .about-cta .btn-primary:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: white;
+  }
+
+  .fullscreen-banner {
+    position: relative;
+    height: 100vh; /* Ensures full screen height */
+    background-size: cover; /* Stretches background to fill area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-text {
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem; /* space between elements */
+  }
+  
+  
+  .banner-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: var(--radius);
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    max-width: 220px;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  
+  .banner-button:hover {
+    background-color: var(--gold);
+    color: white;
+  }
+  
+  .fullscreen-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fullscreen-values {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .fullscreen-values::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Proper overlay */
+    z-index: 1;
+  }
+  
+  .fullscreen-values .section-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.7rem;
+    color: white;
+    margin-bottom: 3rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .value-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .value-card:hover {
+    background-color: var(--gold);
+    color: white;
+    border: none;
+    transform: translateY(-6px);
+  }
+  
+  .value-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .value-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: inherit;
+  }
+  
+  
+  .value-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .value-card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .value-card p {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .about-text blockquote {
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--gold);
+    color: #777;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    background-color: #f4f4f4;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+  }
+  
+  .section-dark {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem; /* ⬅️ Increased padding for vertical size */
+  }
+  
+  .counters {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .counter-box {
+    min-width: 200px;
+  }
+  
+  .counter-number {
+    font-size: 4rem; /* ⬅️ Make numbers visually larger */
+    font-weight: 700;
+    display: block;
+    color: white;
+  }
+  
+  .counter-box p {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+  
+  .about-layout {
+    max-width: 800px; /* Constrain width */
+    margin: 0 auto; /* Center */
+    padding: 2rem 1.5rem; /* Add breathing room */
+    text-align: left; /* Optional for centering text */
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  
+/* CTA Enhancements */
+.modern-cta {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mission-overlay {
+    background: rgba(0, 0, 0, 0.65); /* Dark tint */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+  
+  .mission-text {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    padding: 2rem;
+  }
+  
+  .mission-text h2 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mission-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: #eaeaea;
+  }
+  
+  .cta-button {
+    background: transparent;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: 2px solid white;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--gold);
+    color: white;
+    border-color: var(--gold);
+  }
+  
+  .fullscreen-mission {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2.4rem;
+    }
+    .about-bio-text {
+      text-align: center;
+    }
+    .about-values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
