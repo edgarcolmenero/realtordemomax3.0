@@ -356,14 +356,133 @@
   }
   
 
-  /* Desktop dropdowns hidden by default */
+/* ===== NAVBAR: Desktop Hover Behavior ===== */
 @media screen and (min-width: 769px) {
-    .dropdown-menu {
-      display: none !important;
-    }
-  
-    .dropdown:hover .dropdown-menu {
-      display: flex !important;
-    }
+  .dropdown-menu {
+    display: none !important;
   }
-    
+
+  .dropdown:hover .dropdown-menu {
+    display: flex !important;
+  }
+}
+
+/* ===== GLOBAL MOBILE RESPONSIVE FIXES ===== */
+@media screen and (max-width: 768px) {
+  /* NAVBAR FIX */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7); /* fallback if needed */
+    flex-wrap: wrap;
+  }
+
+  .mobile-toggle {
+    display: block;
+    cursor: pointer;
+    color: var(--accent, #c9a96e);
+    font-size: 1.5rem;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 998;
+    display: none;
+  }
+
+  .nav-links ul.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 8px;
+    position: static;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  /* IMAGE + SECTION RESPONSIVENESS */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section {
+    padding: 3rem 1.25rem;
+  }
+
+  .split-section {
+    flex-direction: column;
+    padding: 4rem 1rem;
+    gap: 2rem;
+  }
+
+  .split-text,
+  .split-visual {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .split-text h2 {
+    font-size: 2rem;
+  }
+
+  .split-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text,
+  .cta-box {
+    padding: 0 1rem;
+  }
+
+  .cta-box h2,
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .cta-box p,
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .contact-box input,
+  .contact-box textarea,
+  .cta-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
