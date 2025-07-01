@@ -459,31 +459,33 @@ button[type="submit"]:hover {
   color: white;
   text-align: center;
 }
-
 .hero-banner {
   position: relative;
-  background-image: url("lycs-architecture-kUdbEEMcRwE-unsplash.jpg"); /* Your image */
+  background-image: url("lycs-architecture-kUdbEEMcRwE-unsplash.jpg"); /* update as needed */
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  min-height: 90vh;
-  height: 100vh; 
-  color: white;
-  text-align: left;
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 
 .hero-banner-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Full overlay */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem;
+  text-align: center;
 }
+
 
 
 .hero-banner h1 {
@@ -645,5 +647,12 @@ button[type="submit"]:hover {
   .btn-primary {
     font-size: 0.95rem;
     padding: 0.6rem 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    background-attachment: scroll;
+    background-size: cover; /* was "contain" earlier — causes double stacking */
+    height: 100vh;
   }
 }

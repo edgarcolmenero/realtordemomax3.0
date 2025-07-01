@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // animate once
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
@@ -75,90 +75,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // --------- Dropdown Toggle for Mobile Nav ---------
-  const dropdowns = document.querySelectorAll(".dropdown");
-
-  dropdowns.forEach((dropdown) => {
-    const link = dropdown.querySelector("a");
-    const menu = dropdown.querySelector(".dropdown-menu");
-
-    link.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        menu.classList.toggle("show");
-      }
-    });
-  });
-
-  // --------- Close all dropdowns on outside click ---------
-  document.addEventListener("click", (e) => {
-    dropdowns.forEach((dropdown) => {
-      if (!dropdown.contains(e.target)) {
-        const menu = dropdown.querySelector(".dropdown-menu");
-        menu.classList.remove("show");
-      }
-    });
-  });
-
-function toggleNav() {
-  const nav = document.querySelector('.nav-links ul');
-  nav.classList.toggle('active');
-}
-
-document.querySelectorAll('.dropdown > a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      this.parentElement.classList.toggle('open');
-    }
-  });
-});
-  
-  // --------- Mobile Hamburger Toggle ---------
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      navToggle.classList.toggle("open");
-    });
-  }
-});
-
-// ===== Mobile Overlay Nav Toggle =====
-document.addEventListener("DOMContentLoaded", () => {
+  // --------- Mobile Overlay Nav Toggle ---------
   const navToggle = document.getElementById("navToggle");
   const mobileNav = document.getElementById("mobileNav");
   const closeNav = document.getElementById("closeNav");
   const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
-  // Open mobile nav
-  navToggle.addEventListener("click", () => {
-    mobileNav.classList.add("active");
-  });
-
-  // Close mobile nav
-  closeNav.addEventListener("click", () => {
-    mobileNav.classList.remove("active");
-    navToggle.classList.remove("open"); // ✅ resets hamburger to default
-    mobileLinks.forEach(link => link.classList.remove("open"));
-  });
-  
-
-  // Toggle submenus and collapse others
-  mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      const isOpen = link.classList.contains("open");
-
-      // Close all submenus
-      mobileLinks.forEach(l => l.classList.remove("open"));
-
-      // Open this one if it wasn't already open
-      if (!isOpen) {
-        link.classList.add("open");
-      }
+  if (navToggle && mobileNav && closeNav) {
+    // ✅ Show mobile nav
+    navToggle.addEventListener("click", () => {
+      mobileNav.classList.add("active");
+      navToggle.classList.add("open");
     });
-  });
+
+    // ✅ Close mobile nav
+    closeNav.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+      navToggle.classList.remove("open");
+      mobileLinks.forEach(link => link.classList.remove("open"));
+    });
+
+    // ✅ Toggle submenu one at a time
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const isOpen = link.classList.contains("open");
+        mobileLinks.forEach(l => l.classList.remove("open"));
+        if (!isOpen) {
+          link.classList.add("open");
+        }
+      });
+    });
+  }
+
+  // --------- Desktop Dropdown Hover Toggle (No JS Needed) ---------
 });
- 2bd8204 (Final site updates: mobile nav, hero responsiveness)
